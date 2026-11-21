@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "name": "adder_2_prefix",
+  "inputs": [
+    "cin",
+    "a0",
+    "b0",
+    "a1",
+    "b1"
+  ],
+  "gates": [
+    {
+      "id": "g0",
+      "op": "xor",
+      "args": [
+        "a0",
+        "b0"
+      ]
+    },
+    {
+      "id": "g1",
+      "op": "xor",
+      "args": [
+        "a1",
+        "b1"
+      ]
+    },
+    {
+      "id": "g2",
+      "op": "and",
+      "args": [
+        "a0",
+        "b0"
+      ]
+    },
+    {
+      "id": "g3",
+      "op": "and",
+      "args": [
+        "a1",
+        "b1"
+      ]
+    },
+    {
+      "id": "g4",
+      "op": "and",
+      "args": [
+        "g1",
+        "g2"
+      ]
+    },
+    {
+      "id": "g5",
+      "op": "or",
+      "args": [
+        "g3",
+        "g4"
+      ]
+    },
+    {
+      "id": "g6",
+      "op": "and",
+      "args": [
+        "g1",
+        "g0"
+      ]
+    },
+    {
+      "id": "g7",
+      "op": "and",
+      "args": [
+        "g0",
+        "cin"
+      ]
+    },
+    {
+      "id": "g8",
+      "op": "or",
+      "args": [
+        "g2",
+        "g7"
+      ]
+    },
+    {
+      "id": "g9",
+      "op": "and",
+      "args": [
+        "g6",
+        "cin"
+      ]
+    },
+    {
+      "id": "g10",
+      "op": "or",
+      "args": [
+        "g5",
+        "g9"
+      ]
+    },
+    {
+      "id": "g11",
+      "op": "xor",
+      "args": [
+        "g0",
+        "cin"
+      ]
+    },
+    {
+      "id": "g12",
+      "op": "xor",
+      "args": [
+        "g1",
+        "g8"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "s0",
+      "wire": "g11"
+    },
+    {
+      "name": "s1",
+      "wire": "g12"
+    },
+    {
+      "name": "cout",
+      "wire": "g10"
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+[
+  {
+    "id": "adder-2-interleaved",
+    "left": "adder_2_ripple",
+    "right": "adder_2_prefix",
+    "order": [
+      "cin",
+      "a0",
+      "b0",
+      "a1",
+      "b1"
+    ],
+    "maxNodes": 100000,
+    "maxCacheEntries": 200000,
+    "oracle": true
+  },
+  {
+    "id": "adder-4-interleaved",
+    "left": "adder_4_ripple",
+    "right": "adder_4_prefix",
+    "order": [
+      "cin",
+      "a0",
+      "b0",
+      "a1",
+      "b1",
+      "a2",
+      "b2",
+      "a3",
+      "b3"
+    ],
+    "maxNodes": 100000,
+    "maxCacheEntries": 200000,
+    "oracle": true
+  },
+  {
+    "id": "adder-4-faulty",
+    "left": "adder_4_ripple",
+    "right": "adder_4_faulty",
+    "order": [
+      "cin",
+      "a0",
+      "b0",
+      "a1",
+      "b1",
+      "a2",
+      "b2",
+      "a3",
+      "b3"
+    ],
+    "maxNodes": 100000,
+    "maxCacheEntries": 200000,
+    "oracle": true
+  },
+  {
+    "id": "adder-8-interleaved",
+    "left": "adder_8_ripple",
+    "right": "adder_8_prefix",
+    "order": [
+      "cin",
+      "a0",
+      "b0",
+      "a1",
+      "b1",
+      "a2",
+      "b2",
+      "a3",
+      "b3",
+      "a4",
+      "b4",
+      "a5",
+      "b5",
+      "a6",
+      "b6",
+      "a7",
+      "b7"
+    ],
+    "maxNodes": 100000,
+    "maxCacheEntries": 200000,
+    "oracle": false
+  },
+  {
+    "id": "adder-8-grouped",
+    "left": "adder_8_ripple",
+    "right": "adder_8_prefix",
+    "order": [
+      "cin",
+      "a0",
+      "a1",
+      "a2",
+      "a3",
+      "a4",
+      "a5",
+      "a6",
+      "a7",
+      "b0",
+      "b1",
+      "b2",
+      "b3",
+      "b4",
+      "b5",
+      "b6",
+      "b7"
+    ],
+    "maxNodes": 100000,
+    "maxCacheEntries": 200000,
+    "oracle": false
+  },
+  {
+    "id": "adder-12-interleaved",
+    "left": "adder_12_ripple",
+    "right": "adder_12_prefix",
+    "order": [
+      "cin",
+      "a0",
+      "b0",
+      "a1",
+      "b1",
+      "a2",
+      "b2",
+      "a3",
+      "b3",
+      "a4",
+      "b4",
+      "a5",
+      "b5",
+      "a6",
+      "b6",
+      "a7",
+      "b7",
+      "a8",
+      "b8",
+      "a9",
+      "b9",
+      "a10",
+      "b10",
+      "a11",
+      "b11"
+    ],
+    "maxNodes": 100000,
+    "maxCacheEntries": 200000,
+    "oracle": false
+  },
+  {
+    "id": "mux-2-select-first",
+    "left": "mux_2_tree",
+    "right": "mux_2_terms",
+    "order": [
+      "s0",
+      "d0",
+      "d1"
+    ],
+    "maxNodes": 100000,
+    "maxCacheEntries": 200000,
+    "oracle": true
+  },
+  {
+    "id": "mux-8-select-first",
+    "left": "mux_8_tree",
+    "right": "mux_8_terms",
+    "order": [
+      "s0",
+      "s1",
+      "s2",
+      "d0",
+      "d1",
+      "d2",
+      "d3",
+      "d4",
+      "d5",
+      "d6",
+      "d7"
+    ],
+    "maxNodes": 100000,
+    "maxCacheEntries": 200000,
+    "oracle": true
+  },
+  {
+    "id": "mux-8-data-first",
+    "left": "mux_8_tree",
+    "right": "mux_8_terms",
+    "order": [
+      "d0",
+      "d1",
+      "d2",
+      "d3",
+      "d4",
+      "d5",
+      "d6",
+      "d7",
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "maxNodes": 100000,
+    "maxCacheEntries": 200000,
+    "oracle": true
+  },
+  {
+    "id": "mux-8-node-limit",
+    "left": "mux_8_tree",
+    "right": "mux_8_terms",
+    "order": [
+      "d0",
+      "d1",
+      "d2",
+      "d3",
+      "d4",
+      "d5",
+      "d6",
+      "d7",
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "maxNodes": 100,
+    "maxCacheEntries": 200000,
+    "oracle": true
+  },
+  {
+    "id": "mux-8-cache-limit",
+    "left": "mux_8_tree",
+    "right": "mux_8_terms",
+    "order": [
+      "s0",
+      "s1",
+      "s2",
+      "d0",
+      "d1",
+      "d2",
+      "d3",
+      "d4",
+      "d5",
+      "d6",
+      "d7"
+    ],
+    "maxNodes": 100000,
+    "maxCacheEntries": 0,
+    "oracle": true
+  }
+]

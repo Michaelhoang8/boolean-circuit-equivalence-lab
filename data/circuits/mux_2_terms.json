@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "name": "mux_2_terms",
+  "inputs": [
+    "s0",
+    "d0",
+    "d1"
+  ],
+  "gates": [
+    {
+      "id": "g0",
+      "op": "not",
+      "args": [
+        "s0"
+      ]
+    },
+    {
+      "id": "g1",
+      "op": "and",
+      "args": [
+        "d0",
+        "g0"
+      ]
+    },
+    {
+      "id": "g2",
+      "op": "and",
+      "args": [
+        "d1",
+        "s0"
+      ]
+    },
+    {
+      "id": "g3",
+      "op": "or",
+      "args": [
+        "0",
+        "g1"
+      ]
+    },
+    {
+      "id": "g4",
+      "op": "or",
+      "args": [
+        "g3",
+        "g2"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "out",
+      "wire": "g4"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "name": "mux_2_tree",
+  "inputs": [
+    "s0",
+    "d0",
+    "d1"
+  ],
+  "gates": [
+    {
+      "id": "g0",
+      "op": "mux",
+      "args": [
+        "s0",
+        "d0",
+        "d1"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "out",
+      "wire": "g0"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "order": [
+    "d0",
+    "d1",
+    "d2",
+    "d3",
+    "d4",
+    "d5",
+    "d6",
+    "d7",
+    "s0",
+    "s1",
+    "s2"
+  ],
+  "limits": {
+    "maxNodes": 100,
+    "maxCacheEntries": 200000
+  },
+  "stats": {
+    "allocatedNodes": 100,
+    "cacheEntries": 93,
+    "applyCalls": 221,
+    "cacheHits": 38
+  },
+  "elapsedMs": 0.09420000000000073,
+  "status": "UNKNOWN",
+  "exhausted": "nodes",
+  "stage": "left circuit"
+}

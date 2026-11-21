@@ -1,0 +1,22 @@
+name: Verify circuit equivalence evidence
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  verify:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run measure -- --output results-ci
+      - uses: actions/upload-artifact@v4
+        with:
+          name: circuit-results-${{ matrix.os }}
+          path: results-ci/

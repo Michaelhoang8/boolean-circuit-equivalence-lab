@@ -1,0 +1,50 @@
+{
+  "order": [
+    "s0",
+    "d0",
+    "d1"
+  ],
+  "limits": {
+    "maxNodes": 100000,
+    "maxCacheEntries": 200000
+  },
+  "stats": {
+    "allocatedNodes": 7,
+    "cacheEntries": 4,
+    "applyCalls": 19,
+    "cacheHits": 4
+  },
+  "elapsedMs": 0.010400000000004184,
+  "status": "EQUIVALENT",
+  "miter": 0,
+  "left": {
+    "out": 8
+  },
+  "right": {
+    "out": 8
+  },
+  "differences": {
+    "out": 0
+  },
+  "reachableNodes": [
+    {
+      "id": 3,
+      "level": 1,
+      "low": 0,
+      "high": 1
+    },
+    {
+      "id": 4,
+      "level": 2,
+      "low": 0,
+      "high": 1
+    },
+    {
+      "id": 8,
+      "level": 0,
+      "low": 3,
+      "high": 4
+    }
+  ],
+  "witness": null
+}

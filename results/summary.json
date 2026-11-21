@@ -1,0 +1,631 @@
+{
+  "format": 1,
+  "warmups": 2,
+  "repetitions": 9,
+  "timingScope": "Fresh manager: circuit compilation, miter and independent witness replay; excludes schema prevalidation, diagnostics traversal, truth-table enumeration, I/O and rendering.",
+  "experiments": [
+    {
+      "id": "adder-2-interleaved",
+      "left": "adder_2_ripple",
+      "right": "adder_2_prefix",
+      "order": [
+        "cin",
+        "a0",
+        "b0",
+        "a1",
+        "b1"
+      ],
+      "maxNodes": 100000,
+      "maxCacheEntries": 200000,
+      "oracle": {
+        "assignments": 32,
+        "mismatches": 0,
+        "firstMismatch": null,
+        "file": "truth-tables/adder-2-interleaved.csv",
+        "sha256": "affbaa899fbaad0233aacd6b14f5e7eb850fa7fe9af273dca156b4ccc445912b",
+        "inputOrder": [
+          "cin",
+          "a0",
+          "b0",
+          "a1",
+          "b1"
+        ],
+        "outputOrder": [
+          "cout",
+          "s0",
+          "s1"
+        ]
+      },
+      "status": "EQUIVALENT",
+      "stats": {
+        "allocatedNodes": 33,
+        "cacheEntries": 35,
+        "applyCalls": 99,
+        "cacheHits": 20
+      },
+      "reachableNodes": 19,
+      "miter": 0,
+      "exhausted": null,
+      "elapsedMs": {
+        "min": 0.057699999999996976,
+        "median": 0.06749999999999545,
+        "max": 0.2846000000000046
+      },
+      "comparisonFile": "comparisons/adder-2-interleaved.json",
+      "comparisonSha256": "faa7c1a5ed834bfcb69274880786a95904679bc409380c76317680f477bb4b9e"
+    },
+    {
+      "id": "adder-4-interleaved",
+      "left": "adder_4_ripple",
+      "right": "adder_4_prefix",
+      "order": [
+        "cin",
+        "a0",
+        "b0",
+        "a1",
+        "b1",
+        "a2",
+        "b2",
+        "a3",
+        "b3"
+      ],
+      "maxNodes": 100000,
+      "maxCacheEntries": 200000,
+      "oracle": {
+        "assignments": 512,
+        "mismatches": 0,
+        "firstMismatch": null,
+        "file": "truth-tables/adder-4-interleaved.csv",
+        "sha256": "d4173059089091ea9090834178868fbe43f111c2505af01f24317e967d216098",
+        "inputOrder": [
+          "cin",
+          "a0",
+          "b0",
+          "a1",
+          "b1",
+          "a2",
+          "b2",
+          "a3",
+          "b3"
+        ],
+        "outputOrder": [
+          "cout",
+          "s0",
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "status": "EQUIVALENT",
+      "stats": {
+        "allocatedNodes": 118,
+        "cacheEntries": 140,
+        "applyCalls": 345,
+        "cacheHits": 88
+      },
+      "reachableNodes": 50,
+      "miter": 0,
+      "exhausted": null,
+      "elapsedMs": {
+        "min": 0.07090000000000174,
+        "median": 0.07849999999999824,
+        "max": 0.17790000000000106
+      },
+      "comparisonFile": "comparisons/adder-4-interleaved.json",
+      "comparisonSha256": "b302d3677b874ea3ee7a93f9499e58498af2acaf8638e5838e5d9d5505d17248"
+    },
+    {
+      "id": "adder-4-faulty",
+      "left": "adder_4_ripple",
+      "right": "adder_4_faulty",
+      "order": [
+        "cin",
+        "a0",
+        "b0",
+        "a1",
+        "b1",
+        "a2",
+        "b2",
+        "a3",
+        "b3"
+      ],
+      "maxNodes": 100000,
+      "maxCacheEntries": 200000,
+      "oracle": {
+        "assignments": 512,
+        "mismatches": 256,
+        "firstMismatch": {
+          "assignment": {
+            "cin": false,
+            "a0": false,
+            "b0": false,
+            "a1": false,
+            "b1": false,
+            "a2": true,
+            "b2": true,
+            "a3": false,
+            "b3": false
+          },
+          "left": {
+            "s0": false,
+            "s1": false,
+            "s2": false,
+            "s3": true,
+            "cout": false
+          },
+          "right": {
+            "s0": false,
+            "s1": false,
+            "s2": false,
+            "s3": false,
+            "cout": false
+          },
+          "differingOutputs": [
+            "s3"
+          ]
+        },
+        "file": "truth-tables/adder-4-faulty.csv",
+        "sha256": "16d4fe98576be75866cf3240dabf655e50861f03bdf96cc1b0c761149191f8a4",
+        "inputOrder": [
+          "cin",
+          "a0",
+          "b0",
+          "a1",
+          "b1",
+          "a2",
+          "b2",
+          "a3",
+          "b3"
+        ],
+        "outputOrder": [
+          "cout",
+          "s0",
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "status": "INEQUIVALENT",
+      "stats": {
+        "allocatedNodes": 95,
+        "cacheEntries": 136,
+        "applyCalls": 322,
+        "cacheHits": 92
+      },
+      "reachableNodes": 69,
+      "miter": 49,
+      "exhausted": null,
+      "elapsedMs": {
+        "min": 0.08520000000000039,
+        "median": 0.09900000000000375,
+        "max": 0.23060000000000969
+      },
+      "comparisonFile": "comparisons/adder-4-faulty.json",
+      "comparisonSha256": "47239a48c32afd506b7577e683be813b925e029948b11653a8bfe1f6e103d295"
+    },
+    {
+      "id": "adder-8-interleaved",
+      "left": "adder_8_ripple",
+      "right": "adder_8_prefix",
+      "order": [
+        "cin",
+        "a0",
+        "b0",
+        "a1",
+        "b1",
+        "a2",
+        "b2",
+        "a3",
+        "b3",
+        "a4",
+        "b4",
+        "a5",
+        "b5",
+        "a6",
+        "b6",
+        "a7",
+        "b7"
+      ],
+      "maxNodes": 100000,
+      "maxCacheEntries": 200000,
+      "oracle": null,
+      "status": "EQUIVALENT",
+      "stats": {
+        "allocatedNodes": 460,
+        "cacheEntries": 586,
+        "applyCalls": 1321,
+        "cacheHits": 403
+      },
+      "reachableNodes": 148,
+      "miter": 0,
+      "exhausted": null,
+      "elapsedMs": {
+        "min": 0.2038000000000011,
+        "median": 0.32519999999999527,
+        "max": 0.4124999999999943
+      },
+      "comparisonFile": "comparisons/adder-8-interleaved.json",
+      "comparisonSha256": "41ce81f908b5d11045be6786fbd1dc5cadffce656699b7cc3f64e91c89008ce6"
+    },
+    {
+      "id": "adder-8-grouped",
+      "left": "adder_8_ripple",
+      "right": "adder_8_prefix",
+      "order": [
+        "cin",
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7",
+        "b0",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7"
+      ],
+      "maxNodes": 100000,
+      "maxCacheEntries": 200000,
+      "oracle": null,
+      "status": "EQUIVALENT",
+      "stats": {
+        "allocatedNodes": 4987,
+        "cacheEntries": 7157,
+        "applyCalls": 14463,
+        "cacheHits": 4452
+      },
+      "reachableNodes": 1574,
+      "miter": 0,
+      "exhausted": null,
+      "elapsedMs": {
+        "min": 1.7387999999999977,
+        "median": 2.6351000000000084,
+        "max": 4.30210000000001
+      },
+      "comparisonFile": "comparisons/adder-8-grouped.json",
+      "comparisonSha256": "e448ef9349b28077592ce3e27fce2232cb8d8bf38aff483ffb3e1747d50271fb"
+    },
+    {
+      "id": "adder-12-interleaved",
+      "left": "adder_12_ripple",
+      "right": "adder_12_prefix",
+      "order": [
+        "cin",
+        "a0",
+        "b0",
+        "a1",
+        "b1",
+        "a2",
+        "b2",
+        "a3",
+        "b3",
+        "a4",
+        "b4",
+        "a5",
+        "b5",
+        "a6",
+        "b6",
+        "a7",
+        "b7",
+        "a8",
+        "b8",
+        "a9",
+        "b9",
+        "a10",
+        "b10",
+        "a11",
+        "b11"
+      ],
+      "maxNodes": 100000,
+      "maxCacheEntries": 200000,
+      "oracle": null,
+      "status": "EQUIVALENT",
+      "stats": {
+        "allocatedNodes": 1034,
+        "cacheEntries": 1352,
+        "applyCalls": 2949,
+        "cacheHits": 966
+      },
+      "reachableNodes": 294,
+      "miter": 0,
+      "exhausted": null,
+      "elapsedMs": {
+        "min": 0.6349999999999909,
+        "median": 0.7660000000000196,
+        "max": 1.1929000000000087
+      },
+      "comparisonFile": "comparisons/adder-12-interleaved.json",
+      "comparisonSha256": "d05149d23cb5f07925b7bdd0352e3a2636d9db78f0c76788ec4c156a303ea527"
+    },
+    {
+      "id": "mux-2-select-first",
+      "left": "mux_2_tree",
+      "right": "mux_2_terms",
+      "order": [
+        "s0",
+        "d0",
+        "d1"
+      ],
+      "maxNodes": 100000,
+      "maxCacheEntries": 200000,
+      "oracle": {
+        "assignments": 8,
+        "mismatches": 0,
+        "firstMismatch": null,
+        "file": "truth-tables/mux-2-select-first.csv",
+        "sha256": "aca90ac9cb29602602c2824ee5890c313e229d112f517bb6f115f21f08c22fb2",
+        "inputOrder": [
+          "s0",
+          "d0",
+          "d1"
+        ],
+        "outputOrder": [
+          "out"
+        ]
+      },
+      "status": "EQUIVALENT",
+      "stats": {
+        "allocatedNodes": 7,
+        "cacheEntries": 4,
+        "applyCalls": 19,
+        "cacheHits": 4
+      },
+      "reachableNodes": 3,
+      "miter": 0,
+      "exhausted": null,
+      "elapsedMs": {
+        "min": 0.008199999999987995,
+        "median": 0.009399999999999409,
+        "max": 0.023400000000009413
+      },
+      "comparisonFile": "comparisons/mux-2-select-first.json",
+      "comparisonSha256": "660d985eb9785853c2f009b583a1ac2146f7eedbf378c0cf4781295380045bb9"
+    },
+    {
+      "id": "mux-8-select-first",
+      "left": "mux_8_tree",
+      "right": "mux_8_terms",
+      "order": [
+        "s0",
+        "s1",
+        "s2",
+        "d0",
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6",
+        "d7"
+      ],
+      "maxNodes": 100000,
+      "maxCacheEntries": 200000,
+      "oracle": {
+        "assignments": 2048,
+        "mismatches": 0,
+        "firstMismatch": null,
+        "file": "truth-tables/mux-8-select-first.csv",
+        "sha256": "f433f1b2dbb032b5fe2ecff7cc23e735e7b5264d3344058dda22e7ab4c961a7d",
+        "inputOrder": [
+          "s0",
+          "s1",
+          "s2",
+          "d0",
+          "d1",
+          "d2",
+          "d3",
+          "d4",
+          "d5",
+          "d6",
+          "d7"
+        ],
+        "outputOrder": [
+          "out"
+        ]
+      },
+      "status": "EQUIVALENT",
+      "stats": {
+        "allocatedNodes": 96,
+        "cacheEntries": 91,
+        "applyCalls": 247,
+        "cacheHits": 35
+      },
+      "reachableNodes": 15,
+      "miter": 0,
+      "exhausted": null,
+      "elapsedMs": {
+        "min": 0.0700999999999965,
+        "median": 0.07310000000001082,
+        "max": 0.09260000000000446
+      },
+      "comparisonFile": "comparisons/mux-8-select-first.json",
+      "comparisonSha256": "664a5420aa906762fad17810a864bf993bb8297f0c6a4af21e96350e2b44db7b"
+    },
+    {
+      "id": "mux-8-data-first",
+      "left": "mux_8_tree",
+      "right": "mux_8_terms",
+      "order": [
+        "d0",
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6",
+        "d7",
+        "s0",
+        "s1",
+        "s2"
+      ],
+      "maxNodes": 100000,
+      "maxCacheEntries": 200000,
+      "oracle": {
+        "assignments": 2048,
+        "mismatches": 0,
+        "firstMismatch": null,
+        "file": "truth-tables/mux-8-data-first.csv",
+        "sha256": "b423cdb305382ac83bb74fe18bb56e786cc84a2d699ef8b729cb7d9ae017125d",
+        "inputOrder": [
+          "d0",
+          "d1",
+          "d2",
+          "d3",
+          "d4",
+          "d5",
+          "d6",
+          "d7",
+          "s0",
+          "s1",
+          "s2"
+        ],
+        "outputOrder": [
+          "out"
+        ]
+      },
+      "status": "EQUIVALENT",
+      "stats": {
+        "allocatedNodes": 820,
+        "cacheEntries": 1273,
+        "applyCalls": 2611,
+        "cacheHits": 572
+      },
+      "reachableNodes": 509,
+      "miter": 0,
+      "exhausted": null,
+      "elapsedMs": {
+        "min": 0.26650000000000773,
+        "median": 0.3296999999999741,
+        "max": 0.48799999999999955
+      },
+      "comparisonFile": "comparisons/mux-8-data-first.json",
+      "comparisonSha256": "fdea3dc25163e1b167e1e7482fb597ad68ebc5c16404fb6937d101873dd18624"
+    },
+    {
+      "id": "mux-8-node-limit",
+      "left": "mux_8_tree",
+      "right": "mux_8_terms",
+      "order": [
+        "d0",
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6",
+        "d7",
+        "s0",
+        "s1",
+        "s2"
+      ],
+      "maxNodes": 100,
+      "maxCacheEntries": 200000,
+      "oracle": {
+        "assignments": 2048,
+        "mismatches": 0,
+        "firstMismatch": null,
+        "file": "truth-tables/mux-8-node-limit.csv",
+        "sha256": "b423cdb305382ac83bb74fe18bb56e786cc84a2d699ef8b729cb7d9ae017125d",
+        "inputOrder": [
+          "d0",
+          "d1",
+          "d2",
+          "d3",
+          "d4",
+          "d5",
+          "d6",
+          "d7",
+          "s0",
+          "s1",
+          "s2"
+        ],
+        "outputOrder": [
+          "out"
+        ]
+      },
+      "status": "UNKNOWN",
+      "stats": {
+        "allocatedNodes": 100,
+        "cacheEntries": 93,
+        "applyCalls": 221,
+        "cacheHits": 38
+      },
+      "reachableNodes": null,
+      "miter": null,
+      "exhausted": "nodes",
+      "elapsedMs": {
+        "min": 0.04480000000000928,
+        "median": 0.09020000000003847,
+        "max": 0.12180000000000746
+      },
+      "comparisonFile": "comparisons/mux-8-node-limit.json",
+      "comparisonSha256": "9f8cf43498beb53f11e87aeab814e30f63165977af0c689c28c94f4e172b95b7"
+    },
+    {
+      "id": "mux-8-cache-limit",
+      "left": "mux_8_tree",
+      "right": "mux_8_terms",
+      "order": [
+        "s0",
+        "s1",
+        "s2",
+        "d0",
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6",
+        "d7"
+      ],
+      "maxNodes": 100000,
+      "maxCacheEntries": 0,
+      "oracle": {
+        "assignments": 2048,
+        "mismatches": 0,
+        "firstMismatch": null,
+        "file": "truth-tables/mux-8-cache-limit.csv",
+        "sha256": "f433f1b2dbb032b5fe2ecff7cc23e735e7b5264d3344058dda22e7ab4c961a7d",
+        "inputOrder": [
+          "s0",
+          "s1",
+          "s2",
+          "d0",
+          "d1",
+          "d2",
+          "d3",
+          "d4",
+          "d5",
+          "d6",
+          "d7"
+        ],
+        "outputOrder": [
+          "out"
+        ]
+      },
+      "status": "UNKNOWN",
+      "stats": {
+        "allocatedNodes": 12,
+        "cacheEntries": 0,
+        "applyCalls": 3,
+        "cacheHits": 0
+      },
+      "reachableNodes": null,
+      "miter": null,
+      "exhausted": "cache",
+      "elapsedMs": {
+        "min": 0.018100000000004002,
+        "median": 0.019099999999980355,
+        "max": 0.02199999999999136
+      },
+      "comparisonFile": "comparisons/mux-8-cache-limit.json",
+      "comparisonSha256": "cc2c4b1e71173a5210697144d22ad721eb55b45612b98ab2a444b0c120fe43ad"
+    }
+  ]
+}

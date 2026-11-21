@@ -1,0 +1,44 @@
+{
+  "captured_at_utc": "2026-11-21T01:32:11.091846+00:00",
+  "source": "Actual browser rendering of docs/report.html",
+  "recording": "Continuous automated browser review; not manual development footage",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "page_title": "Boolean circuit equivalence lab",
+  "report_sha256_normalized_text": "381ff598e41b3b409eac96f4f69f1f2b812448ba488394702e44b00a90e59319",
+  "video_sha256": "b090cb6912c05d7833c4909c86b31d4f3be4333f2f090d450eff338b92be121f",
+  "captures": [
+    {
+      "path": "docs/screenshots/01_overview.png",
+      "section": "overview",
+      "sha256": "5fdaf06574b71f8bd9f93a146406478ac3bae2e398ea8022e4569f9b25b010f3"
+    },
+    {
+      "path": "docs/screenshots/02_miter.png",
+      "section": "miter",
+      "sha256": "daa0f8a13b9016ddec083a1270d481834c0d45c891f08d72280131b4d9edc834"
+    },
+    {
+      "path": "docs/screenshots/03_counterexample.png",
+      "section": "counterexample",
+      "sha256": "8d5d724dc152b84caf84022a0dc8aa371c696f9d760ddbc68ab4c0a342874e41"
+    },
+    {
+      "path": "docs/screenshots/04_ordering.png",
+      "section": "ordering",
+      "sha256": "d1cb0940d028dde5b3991762158950d8d93bce8a6675b8ee9cca3aff0e31b6d4"
+    },
+    {
+      "path": "docs/screenshots/05_budgets.png",
+      "section": "budgets",
+      "sha256": "9fe87b741c918bd49450c94949a59cff57b01fb4b0c4b9983d5a8592b872dee6"
+    },
+    {
+      "path": "docs/screenshots/06_reproduction.png",
+      "section": "reproduction",
+      "sha256": "b1bcb3cff179936bdfdc3d72069703b54d60354df23010769284e1e9b838ff96"
+    }
+  ]
+}

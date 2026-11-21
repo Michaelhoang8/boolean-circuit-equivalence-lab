@@ -1,0 +1,9 @@
+input_bits,left_output_bits,right_output_bits,differing_outputs
+000,0,0,
+001,0,0,
+010,1,1,
+011,1,1,
+100,0,0,
+101,1,1,
+110,0,0,
+111,1,1,

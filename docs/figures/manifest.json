@@ -1,0 +1,11 @@
+{
+  "normalization": "CRLF to LF before SHA-256",
+  "rendererSha256": "075b798b66d5061755da13c6e7fba65cea2273269238be9440923ab222944b20",
+  "measuredSummarySha256": "0e5eff12778428d15c4fb153117e2731167c6862a986833d153c78b35751e9de",
+  "files": {
+    "docs/figures/mux2-bdd.svg": "fbed8a78827892bac85a991bc33c0c8a79a7528e3892cf85be2a30a2f47eeee4",
+    "docs/figures/mux2-bdd.dot": "c948dbbb060670645a0e8a39feaf6f4c590954c028f6dae325f5a014dd618619",
+    "docs/figures/order-size.svg": "0770bb882b879d040d6f393aeee3dfaa96000907145e3c8a609b2ad9016a11c3",
+    "docs/report.html": "381ff598e41b3b409eac96f4f69f1f2b812448ba488394702e44b00a90e59319"
+  }
+}
