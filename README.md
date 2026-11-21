@@ -1,5 +1,7 @@
 # Boolean circuit equivalence lab
 
+**[View the report in your browser](https://Michaelhoang8.github.io/boolean-circuit-equivalence-lab/)**
+
 A bounded **reduced ordered binary decision diagram (ROBDD)** engine and combinational circuit checker in TypeScript. It compiles both circuits into one fixed-order manager, constructs an XOR/OR output miter, and returns `EQUIVALENT`, `INEQUIVALENT` with a replayed assignment, or `UNKNOWN` when a resource budget prevents completion.
 
 **[Technical report](docs/report.html)** · [Screenshots](docs/screenshots/README.md) · [Review recording](docs/recordings/README.md) · [Specification](docs/specification.md)
